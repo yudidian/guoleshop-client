@@ -12,6 +12,9 @@ import Header from "@/components/Header/Header";
 
 export default {
   name: 'App',
+  mounted() {
+    this.$store.dispatch('getCategory');
+  },
   components: {
     Footer,
     Header

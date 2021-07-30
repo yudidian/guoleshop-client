@@ -2,6 +2,7 @@ import Vuex from 'vuex';
 import Vue from "vue";
 import home from './home';
 import user from './user'
+import search from "@/store/search";
 Vue.use(Vuex);
 
 const state={
@@ -16,14 +17,15 @@ const actions={
 const mutations={
 
 }
-const store=new Vuex({
+const store=new Vuex.Store({
   state,
   getters,
   actions,
   mutations,
-  module:{
+  modules:{
     home,
-    user
+    user,
+    search
   }
 });
 

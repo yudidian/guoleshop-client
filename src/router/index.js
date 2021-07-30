@@ -28,9 +28,11 @@ VueRouter.prototype.replace=function (location,onResolved,onRejected){
   }
 }
 const router =new VueRouter({
+  mode:'history',
   routes:[
     {
       path:'/',
+      redirect:'/home',
       component:Home,
     },
     {
@@ -52,13 +54,9 @@ const router =new VueRouter({
       },
     },
     {
-      path:'/search',
+      path:'/search/:keywords',
       component:Search,
       name:'search',
-      props(route){
-        const {keywords}=route.query;
-        return {keywords};
-      },
     }
   ]
 });

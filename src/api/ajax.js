@@ -6,7 +6,7 @@ import Nprogress from "nprogress";
 import 'nprogress/nprogress.css'
 //1、配置基础路径和延时时间
 const service=axios.create({
-  baseURL:'api',
+  baseURL:'/api',
   timeout:20000,
 })
 
